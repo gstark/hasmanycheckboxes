@@ -14,6 +14,9 @@
     = f.label :name, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_field :name, class: 'form-control'
+
+  = f.collection_check_boxes :team_ids, Team.all, :id, :name
+
   .form-group
     .col-sm-offset-2.col-sm-10
       = f.submit class: 'btn btn-primary'
