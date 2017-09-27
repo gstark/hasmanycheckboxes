@@ -1,0 +1,11 @@
+%tr
+  %td= player.name
+  %td
+    = link_to player do
+      %span.glyphicon.glyphicon-ok
+  %td
+    = link_to edit_player_path(player) do
+      %span.glyphicon.glyphicon-pencil
+  %td
+    = link_to player, data: { confirm: 'Are you sure?' }, method: :delete do
+      %span.glyphicon.glyphicon-remove

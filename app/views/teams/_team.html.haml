@@ -1,0 +1,11 @@
+%tr
+  %td= team.name
+  %td
+    = link_to team do
+      %span.glyphicon.glyphicon-ok
+  %td
+    = link_to edit_team_path(team) do
+      %span.glyphicon.glyphicon-pencil
+  %td
+    = link_to team, data: { confirm: 'Are you sure?' }, method: :delete do
+      %span.glyphicon.glyphicon-remove
