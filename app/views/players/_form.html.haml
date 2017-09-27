@@ -15,7 +15,13 @@
     .col-sm-10
       = f.text_field :name, class: 'form-control'
 
-  = f.collection_check_boxes :team_ids, Team.all, :id, :name
+  .form-group
+    .col-sm-10.col-sm-offset-2
+      %ul.list-group
+        = f.collection_check_boxes :team_ids, Team.all, :id, :name do |box|
+          %li.list-group-item
+            = box.check_box
+            = box.object.name
 
   .form-group
     .col-sm-offset-2.col-sm-10
